@@ -27,6 +27,14 @@ export interface Env {
 
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-		return new Response('Hello World!');
+		// JSON形式のレスポンスデータを作成
+		const jsonResponse = JSON.stringify({ message: "Hello World" });
+
+		// Responseオブジェクトを作成し、Content-Typeヘッダーにapplication/jsonを設定
+		return new Response(jsonResponse, {
+				headers: {
+						"Content-Type": "application/json"
+				}
+		});
 	},
 };
