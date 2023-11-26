@@ -40,7 +40,7 @@ export default {
 		const allowOrigin = allowedOrigins.includes(requestOrigin) ? requestOrigin : 'null';
 
 		// JSON形式のレスポンスデータを作成
-		const jsonResponse = JSON.stringify({ message: "Hello World" });
+		const jsonResponse = JSON.stringify({ message: `Hello World ${env.MY_VARIABLE}` });
 
 		// Responseオブジェクトを作成し、Content-Typeヘッダーにapplication/jsonを設定
 		// Responseオブジェクトを作成し、Content-Typeヘッダーにapplication/jsonを設定
