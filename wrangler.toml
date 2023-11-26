@@ -9,7 +9,7 @@ compatibility_date = "2023-05-18"
 MY_VARIABLE = "DEV"
 
 [env.production.vars]
-API_HOST = "PROD"
+MY_VARIABLE = "PROD"
 
 # Bind a KV Namespace. Use KV as persistent storage for small key-value pairs.
 # Docs: https://developers.cloudflare.com/workers/runtime-apis/kv
